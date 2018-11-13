@@ -1,0 +1,114 @@
+/*********Imported Goods**********/
+@import url(//fonts.googleapis.com/css?family=Lato:100);
+/*********************************/
+
+/*********************************
+General
+*********************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*********************************
+Header
+*********************************/
+header {
+    grid-row: 1;
+    grid-column: 2;
+    margin: 0;
+    font-size: 2em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+#date {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1;
+    grid-row: 2;
+    font-size:1.5em;
+}
+
+#date > p {
+    font-family: lato;
+    /* font-weight: 800; */
+}
+/*********************************
+Body
+*********************************/
+#main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 500px;
+}
+
+#clock-section {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background: #FFF;
+    border: 1px solid rgb(226, 226, 226);
+    box-shadow: 8px 5px 10px rgb(223, 223, 223);
+    border-radius: 3%;
+    height: 100%;
+}
+
+#clock-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#clock-display > p {
+    font-size: 4em;
+    font-family: lato;
+}
+/*********************************
+Nav
+*********************************/
+
+/*********************************
+Footer
+*********************************/
+footer {
+    grid-column: 2;
+    grid-row: 3;
+}
+/*********************************
+Color
+*********************************/
+h1, p {
+    color: rgb(58, 58, 58);
+}
+/*********************************
+Media Queries
+*********************************/
+@media(max-width: 600px) {
+    #main {
+        padding: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    header {
+        grid-column: 1;
+    }
+
+    #clock-section {
+        grid-column: 1;
+    }
+}
+
+@media(min-width: 600px) {
+    #main {
+        margin-top: 25vh;
+    }
+}
